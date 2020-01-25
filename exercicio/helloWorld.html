@@ -3,13 +3,54 @@
 <head>
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
-    <title>Page Title</title>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
     <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <script src='helloWorld.js'></script>
-</head>
+    <title>Hello World Com Js</title>
+    <style>
+        body{
+            background: rgba(16, 86, 133, 0.774);
+            color:#fff;
+            font: normal 18pt Arial;
+        }
+        div{
+            background: #000;
+            width: 300px;
+            height: 300px;
 
+        }
+    </style>
+</head>
 <body>
-    
+    <div id="luz"></div>
+    <script>
+        /*window.confirm('Aperte OK');
+        var nome = window.prompt("Digite seu nome");
+        document.write(`${nome} !`);// Acento, não aspas simples
+        pegar elemento pela TAG
+        var p1 = window.document.getElementsByTagName('p')[0];
+        window.document.write(`Priemiro Paragrafo é: ${p1.innerText}`);*/
+        
+        //Alterar a Div com o mouse
+        var div = window.document.getElementById('luz');
+        var click = 0; 
+        div.addEventListener('mouseenter', entrar);
+        div.addEventListener('mouseout', sair);
+        div.addEventListener('click', clicar);
+        function entrar(){
+            (click%2) == 0 ? div.innerText = 'Acender?' : div.innerText = 'Apagar?';
+            div.style.color = 'red';
+        }
+
+        function sair(){
+            div.innerText = "";
+        }
+
+        function clicar(){   
+            div.innerText = '';
+            (click%2) == 0 ? div.style.background = 'yellow' :div.style.background = '#000';
+            ++click;
+        }
+
+    </script>
 </body>
 </html>
