@@ -4,61 +4,103 @@
     <meta charset='utf-8'>
     <meta http-equiv='X-UA-Compatible' content='IE=edge'>
     <meta name='viewport' content='width=device-width, initial-scale=1'>
-    <link rel='stylesheet' type='text/css' media='screen' href='main.css'>
-    <title>Hello World Com Js</title>
-    <style>
-        body{
-            background: rgba(16, 86, 133, 0.774);
-            color:#fff;
-            font: normal 18pt Arial;
-        }
-        div{
-            background: #000;
-            width: 300px;
-            height: 300px;
-        }
-
-        input{
-            font: normal 18pt Arial;
-            width: 40px;
-        }
-    </style>
+    <link rel='stylesheet' type='text/css' media='screen' href='helloWorld.css'>
+    <script type="text/javascript" src="helloWorld.js" ></script>
+    <title>Rugby</title>
 </head>
 <body>
-    <div id="luz"></div>
-    <input type="text" id="teste"/>
-    <script>
-        /*window.confirm('Aperte OK');
-        var nome = window.prompt("Digite seu nome");
-        document.write(`${nome} !`);// Acento, não aspas simples
-        pegar elemento pela TAG
-        var p1 = window.document.getElementsByTagName('p')[0];
-        window.document.write(`Priemiro Paragrafo é: ${p1.innerText}`);*/
-        
-        //Alterar a Div com o mouse
-        var div = window.document.getElementById('luz');
-        var click = 0; 
-        div.addEventListener('mouseenter', entrar);
-        div.addEventListener('mouseout', sair);
-        div.addEventListener('click', clicar);
-        function entrar(){
-            (click%2) == 0 ? div.innerText = 'Acender?' : div.innerText = 'Apagar?';
-            div.style.color = 'red';
-        }
+    <div id="navBar">
+        <h1>RUGBY</h1>
+        <ul>
+            <li class="menu">ORIGEM</li>
+            <li class="menu">RUGBY NO BRASIL</li>
+            <li class="menu">COMO JOGAR</li>
+            <li class="menu">REGRAS</li>
+            <li class="menu">CONTATO</li>
+        </ul>
+    </div>
+    <div id="origem">
+        <h3>Origem do Rugby</h3>
+        <p>Hoje, a versão mais aceita a respeito da origem do esporte está relacionada com uma jogada irregular de William Webb Ellis, durante uma partida de football em 1823, na Rugby School, localizada na Inglaterra. Foi somente 1880, depois, inclusive, da morte do autor da jogada irregular do football, é que veio o reconhecimento a respeito da criação do esporte.</p>
+        <p>Antes disso, há relatos de práticas semelhantes na antiguidade romana, onde um jogo Harpastum era praticado. Além disso, na Europa, mais especificamente na Itália, no século XVI, havia um esporte muito parecido com o rugby, e que recebeu o nome de Calcio.</p>
+        <p>Durante algum tempo ele foi praticado nas aulas de educação física na Inglaterra, mas ainda sem uma regulamentação unificada. A unificação das regras só teve início por volta de 1846, também pelos estudantes da Rugby School. Já a primeira partida entre países aconteceu em 1871, disputada por Inglaterra e Escócia.</p>
+        <p>Nas Olimpíadas da Era Moderna, o rugby foi disputado em quatro das sete primeiras edições, sendo que a primeira delas foi em 1900, nos Jogos de Paris. As outras foram em 1908, 1920 e 1924. Nesta última o Comitê Olímpico Internacional optou por retirar a modalidade da competição.</p>
+        <p>Em 2009, o Comitê decidiu que o rugby sevens seria o eleito para tornar a entrar nas Olimpíadas a partir da edição de 2016, realizada no Rio de Janeiro. A equipe masculina de Fiji sagrou-se campeã, deixando a Inglaterra com a medalha de prata e a África do Sul com o bronze.</p>
+    </div>
+    <div id="brasil">
+        <h3>Rugby no Brasil</h3>
+        <p>O esporte chegou ao Brasil pouco tempo depois de sua criação, em 1891, a princípio, no Rio de Janeiro, com o Clube Brasileiro de Futebol de Rugby. Em 1895 foi a vez de São Paulo, com grandes incentivos de Charles Miller. Mas somente em 1920 é que a modalidade começou a aumentar o número de adeptos, aumentando, consequentemente, a quantidade de equipes e o número de competições.</p>
+        <p>O órgão máximo do esporte no Brasil é a Confederação Brasileira de Rugby (CBRu). Fundada em 2010, é filiada ao World Rugby e ao Comitê Olímpico Brasileiro.</p>
+        <p>Anteriormente a esta, duas instituições foram muito importantes para a modalidade no país, a União de Rugby do Brasil, cuja fundação foi feita em 1963 e a Associação Brasileira de Rugby, que foi fundada em 1972.</p>
+    </div>
+    <div id="jogar">
+        <h3>Como Jogar</h3>
+        <h4>Campo</h4>
+        <p>As partidas de rugby são disputadas em um campo gramado, em formato retangular. O comprimento é de 144 metros e a largura é de 70 metros. É dividos por diversas linhas, sendo que as principais são a central, que divide o campo em dois lados, e a linha dos 22 metros que é aquela onde o jogador toca a bola no chão para fazer o try.</p>
+        <p>No meio da linha de fundo das duas equipes há dois postes interligados por um terceiro, em um formato semelhante a uma letra H. Eles devem ter ao menos 5,6 metros de altura e a barra de ligação estar a 6,4 metros de altura em relação ao solo.</p>
+        <h4>Jogadores</h4>
+        <p>No rugby de quinze, que é uma das modalidades mais disputadas, as equipes são dividas em posições bastante específicas que constituem três grandes grupos, avançados, médios e defesas. Veja abaixo o que faz cada uma das posições:</p>
+        <h5>Pilares ou Loosehead prop:</h5>
+        <p>utilizam as camisas de número 1 e 3 e são os responsáveis por dar estabilidade no scrum, além de terem força suficiente para sustentar os saltadores em um lançamento lateral;</p>
+        <h5>Talonador ou hooker:</h5>
+        <p>é aquele que utiliza a camisa de número 2 e possuem apenas duas funções dentro do jogo: obter a posse de bola no scrum e mandar a bola no lançamento lateral;</p>
+        <h5>Segundas-linhas ou second row:</h5>
+        <p>estes atletas usam as camisas de número 4 e 5. São eles que obtém a bola nos inícios, reinícios e laterais durante o jogo, além de fazer o movimento para frente no scrum, ruck e mauls possibilitando plataformas de ataque;</p>
+        <h5>Asa cego e asa aberto ou blindside flanker e openside flanker:</h5>
+        <p>donos das camisas 6 e 7, eles tem a finalidade de recuperar a bola quando ela fica perdida no chão. Para vencer as disputas devem ter velocidade e força no tackle;</p>
+        <h5>Oitavo ou number 8: </h5>
+        <p>como o nome indica, usam a camisa 8 e tem a responsabilidade de garantir a bola do scrum, carregar a bola no jogo aberto e realizar a ligação entre os forwards e os três quartos nas fases de ataque, para isso, fazendo a defesa de forma agressiva;</p>
+        <h5>Meio-scrum ou scrum-half:</h5>
+        <p>usa a camisa 9 e é aquele que toma as decisões da equipe. Faz a ligação entre forwards e os três-quartos nos scrums, alinhamentos laterais e jogo aberto;</p>
+        <h5>Abertura ou fly-half:</h5>
+        <p>usa a camisa 10 e tem como principal característica a liderança da equipe. Ao receber a bola do meio-scrum, pode chutar, passar ou avançar contra a linha de defesa;</p>
+        <h5>Primeiro centro e segundo cetro ou inside centre e outside centre:</h5>
+        <p>usam a camisa 12 e 13 e cabe a eles defender e atacar, seja interceptando os adversários que estão atacando ou levando a bola o mais para frente possível;</p>
+        <h5>Pontas ou left wing e right wing:</h5>
+        <p>números 11 e 14, lembram um pouco a atuação dos centrais, mas defendem em menor proporção. A eles, está atribuída a responsabilidade de usar a velocidade para avançar no campo e até mesmo fazer um try, que a jogada de maior pontuação (5 pontos);</p>
+        <h5>Fullback:</h5>
+        <p>dono da camisa 15, este jogador fica incumbido de agarrar as bolas que são chutadas de longe, dar chutes a longas distâncias, e ainda ter força suficiente para fazer um tackle agressivo em cima dos adversários.</p>
+    </div>
 
-        function sair(){
-            div.innerText = "";
-        }
+    <div id="regras">
+        <h3>Regras</h3>
+        <h5>Veja quais são as principais regras de um jogo de ruby quinze:</h5>
+        <ul>
+            <li>Cada partida tem duração de 80 minutos. Elas são divididas em dois tempos de 40 minutos, com um pequeno intervalo entre eles;</li>
+            <li>Vence a equipe que conseguir marcar o maior número de pontos;</li>
+            <li>Para marcar os pontos, os jogadores efetuam uma série de jogadas
+                <ul>
+                    <li>Passe</li>
+                    <li>Tackle</li> 
+                    <li>Ruck</li>
+                    <li>Knock-on</li>
+                    <li>Chute</li> 
+                    <li>Maul</li> 
+                    <li>Jogadas de contato</li>
+                    <li>Offside</li>
+                    <li>Lançamento lateral</li>
+                    <li>Scrum</li>
+                </ul>
+            </li>
+            <li>Os pontos são marcados quanto o jogador com a posse de bola consegue ultrapassar a linha de gol do adversário (também é conhecida como linha de fundo). Há diferentes formas de pontuar:
+                <ul>
+                    <li>Try ou ensaio (5 pontos)</li>
+                    <li>Conversão (2 pontos)</li>
+                    <li>Penalidade (3 pontos)</li>
+                    <li>Drop goal (3 pontos)</li>
+                </ul>
+            </li>
+            <li>Elas são fiscalizadas por três ou quatro árbitros, entretanto, somente um tem a responsabilidade de conduzir o jogo;</li>
+            <li>Os jogadores só podem utilizar as mãos em jogadas para os lados ou para trás. Ao jogar a bola para frente, somente os pés poderão ser usados;</li>
+            <li>Assim como no futebol, o rugby possuir cartões amarelo e vermelho. Ao receber o amarelo o jogador fica fora da partida por dez minutos, no vermelho a expulsão é definitiva;</li>
+            <li>Há diferentes formas de cobrar as penalidades: punt, scrum, run e pênalti;</li>
+        </ul>
+    </div>
+    <div id="footer">
+        <p>CREATE by Gabriel Kaustchr</p>
+        <p>COPYRIGHT Site "https://escolaeducacao.com.br/rugby/"</p>
+    </div>
 
-        function clicar(){   
-            div.innerText = '';
-            (click%2) == 0 ? div.style.background = 'yellow' :div.style.background = '#000';
-            ++click;
-            var inp = window.document.getElementById('teste');
-            //Colocar valor na caixa de texto
-            inp.value = click;
-        }
-
-    </script>
+    
 </body>
 </html>
