@@ -16,12 +16,17 @@
             background: #000;
             width: 300px;
             height: 300px;
+        }
 
+        input{
+            font: normal 18pt Arial;
+            width: 40px;
         }
     </style>
 </head>
 <body>
     <div id="luz"></div>
+    <input type="text" id="teste"/>
     <script>
         /*window.confirm('Aperte OK');
         var nome = window.prompt("Digite seu nome");
@@ -49,6 +54,9 @@
             div.innerText = '';
             (click%2) == 0 ? div.style.background = 'yellow' :div.style.background = '#000';
             ++click;
+            var inp = window.document.getElementById('teste');
+            //Colocar valor na caixa de texto
+            inp.value = click;
         }
 
     </script>
